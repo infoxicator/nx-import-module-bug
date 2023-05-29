@@ -14,6 +14,9 @@ module.exports = composePlugins(
   withReact(),
   withModuleFederation(config),
   (config) => {
-    return { ...config, experiments: { outputModule: false } };
+    return {
+      ...config,
+      output: { ...config.output, scriptType: 'text/javascript' },
+    };
   }
 );
