@@ -1,7 +1,6 @@
 const { composePlugins, withNx } = require('@nrwl/webpack');
 const { withReact } = require('@nrwl/react');
 const { ModuleFederationPlugin } = require('webpack').container;
-const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
 const packageJSON = require('../../package.json');
 
 // Nx plugins for webpack to build config object from Nx options and context.
