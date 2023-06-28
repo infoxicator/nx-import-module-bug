@@ -2,39 +2,37 @@ import * as React from 'react';
 
 import NxWelcome from './nx-welcome';
 
-import { importRemote } from '@module-federation/utilities';
+// import { importRemote } from '@module-federation/utilities';
 
 import { Link, Route, Routes } from 'react-router-dom';
 
-// const Shop = React.lazy(() => import('shop/Module'));
+import Shop from 'shop/Module';
+import Cart from 'cart/Module';
+import About from 'about/Module';
 
-// const Cart = React.lazy(() => import('cart/Module'));
+// const About = React.lazy(() =>
+//   importRemote({
+//     scope: 'about',
+//     module: './Module',
+//     url: `http://localhost:4203`,
+//   })
+// );
 
-// const About = React.lazy(() => import('about/Module'));
+// const Shop = React.lazy(() =>
+//   importRemote({
+//     scope: 'shop',
+//     module: './Module',
+//     url: `http://localhost:4201`,
+//   })
+// );
 
-const About = React.lazy(() =>
-  importRemote({
-    scope: 'about',
-    module: './Module',
-    url: `http://localhost:4203`,
-  })
-);
-
-const Shop = React.lazy(() =>
-  importRemote({
-    scope: 'shop',
-    module: './Module',
-    url: `http://localhost:4201`,
-  })
-);
-
-const Cart = React.lazy(() =>
-  importRemote({
-    scope: 'cart',
-    module: './Module',
-    url: `http://localhost:4202`,
-  })
-);
+// const Cart = React.lazy(() =>
+//   importRemote({
+//     scope: 'cart',
+//     module: './Module',
+//     url: `http://localhost:4202`,
+//   })
+// );
 
 export function App() {
   return (
