@@ -10,15 +10,16 @@ import { Link, Route, Routes } from 'react-router-dom';
 
 // const Cart = React.lazy(() => import('cart/Module'));
 
-// const About = React.lazy(() => import('about/Module'));
+// Supports both syntaxes, direct import and also importRemote (dynamic remotes)
+const About = React.lazy(() => import('about/Module'));
 
-const About = React.lazy(() =>
-  importRemote({
-    scope: 'about',
-    module: './Module',
-    url: `http://localhost:4203`,
-  })
-);
+// const About = React.lazy(() =>
+//   importRemote({
+//     scope: 'about',
+//     module: './Module',
+//     url: `http://localhost:4203`,
+//   })
+// );
 
 const Shop = React.lazy(() =>
   importRemote({
